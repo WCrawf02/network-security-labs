@@ -91,7 +91,9 @@ This lab serves as the insecure baseline for comparison.
 ---
 
 ## Files
+- **Packet Tracer lab (updated):** [flat-network-lateral-movement_updated.pkt](./flat-network-lateral-movement_updated.pkt)
 
+---
 
 ## Next Steps
 This lab sets a foundation for demonstrating DMZs, logging, and detection, or more advanced ACL scenarios in future labs.
