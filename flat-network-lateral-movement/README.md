@@ -38,7 +38,15 @@ Assumed attack path:
 2. Unrestricted Layer 3 connectivity allows direct reachability to internal servers.
 3. No segmentation or access controls exist to limit east-west movement.
 4. A single compromised endpoint enables access to all internal assets.
-   
+
+**Security Implications**
+
+In a flat network:
+- Lateral movement requires no exploitation of network controls.
+- East-west traffic appears legitimate at the network layer.
+- Detection relies entirely on endpoint or application visibility.
+- Network-based containment is not possible without segmentation.   
+
 This lab focuses on understanding *why* movement is possible, not just that it is.
 
 ---
