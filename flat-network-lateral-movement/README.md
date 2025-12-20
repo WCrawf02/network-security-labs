@@ -24,7 +24,9 @@ The network consists of:
 - Multiple hosts representing users and servers
 - No internal segmentation or access controls
 - Minimal monitoring or logging
-
+  
+- **Network Topology**
+![Network topology diagram](flat-network-topology.png)
 This design reflects many real-world environments that prioritize simplicity over security.
 
 ---
