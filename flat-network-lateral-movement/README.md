@@ -64,9 +64,10 @@ This highlights why perimeter-focused monitoring fails in flat networks.
 
 ## Mitigation Preview
 
-Future labs will demonstrate:
-- Proper network segmentation
-- Access control enforcement
-- Improved monitoring placement
+**Access Control Enforcement**
+
+An extended ACL was applied inbound on the user VLAN to restrict initiation of traffic toward server assets.
+
+This control effectively prevents lateral movement from compromised user endpoints while preserving required routing and response traffic.
 
 This lab serves as the insecure baseline for comparison.
