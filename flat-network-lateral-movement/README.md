@@ -88,7 +88,10 @@ This lab serves as the insecure baseline for comparison.
 - Layer 3 access controls enforce least privilege without disrupting operations
 - Internal services like DNS increase asset visibility but can be safely controlled
 
-  ---
+---
 
-  ## Next Steps
+## Files
+
+
+## Next Steps
 This lab sets a foundation for demonstrating DMZs, logging, and detection, or more advanced ACL scenarios in future labs.
