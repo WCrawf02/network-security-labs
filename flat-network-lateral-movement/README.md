@@ -29,13 +29,16 @@ This design reflects many real-world environments that prioritize simplicity ove
 
 ---
 
-## Attack Path Analysis
+## Threat Model & Attack Path
 
-Once an attacker gains access to any host:
-- All systems are reachable at Layer 3
-- No trust boundaries restrict east-west movement
-- Lateral movement requires little to no evasion
+This lab models a common flat enterprise access network where user workstations and critical internal services reside on the same subnet.
 
+Assumed attack path:
+1. Initial compromise of a user workstation (phishing, credential theft, or malware).
+2. Unrestricted Layer 3 connectivity allows direct reachability to internal servers.
+3. No segmentation or access controls exist to limit east-west movement.
+4. A single compromised endpoint enables access to all internal assets.
+   
 This lab focuses on understanding *why* movement is possible, not just that it is.
 
 ---
