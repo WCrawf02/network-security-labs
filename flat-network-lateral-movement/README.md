@@ -53,14 +53,20 @@ This lab focuses on understanding *why* movement is possible, not just that it i
 
 ---
 
-## Detection & Visibility Gaps
+## Segmentation & Security Controls
+- VLAN 10: Users (10.10.10.0/24)
+- VLAN 20: Servers (10.10.20.0/24)
+- Inter-VLAN routing via router-on-a-stick
+- Extended ACL applied inbound on VLAN 10 to block user initiation toward servers
+- Internal DNS enabled on server VLAN for resolution without granting access
 
-Key gaps demonstrated:
-- No visibility into east-west traffic
-- No internal controls to generate meaningful alerts
-- Limited ability to distinguish normal vs malicious movement
+---
 
-This highlights why perimeter-focused monitoring fails in flat networks.
+## Validation
+- Users can communicate within their VLAN
+- User-to-server traffic is blocked
+- Server-to-user responses are permitted
+- DNS resolution works without compromising access control
 
 ---
 
@@ -73,3 +79,16 @@ An extended ACL was applied inbound on the user VLAN to restrict initiation of t
 This control effectively prevents lateral movement from compromised user endpoints while preserving required routing and response traffic.
 
 This lab serves as the insecure baseline for comparison.
+
+---
+
+## Key Takeaways
+- Flat networks allow trivial lateral movement
+- VLAN segmentation alone is insufficient for security
+- Layer 3 access controls enforce least privilege without disrupting operations
+- Internal services like DNS increase asset visibility but can be safely controlled
+
+  ---
+
+  ## Next Steps
+This lab sets a foundation for demonstrating DMZs, logging, and detection, or more advanced ACL scenarios in future labs.
