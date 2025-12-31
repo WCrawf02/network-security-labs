@@ -1,0 +1,8 @@
+! VPN VLAN ACL
+! Purpose: Restrict remote users to Engineering and DNS
+
+ip access-list extended ACL_VPN
+ permit udp 10.10.60.0 0.0.0.255 host 10.10.50.10 eq domain
+ permit ip 10.10.60.0 0.0.0.255 10.10.30.0 0.0.0.255
+ deny ip 10.10.60.0 0.0.0.255 10.10.0.0 0.0.255.255
+ permit ip 10.10.60.0 0.0.0.255 any
