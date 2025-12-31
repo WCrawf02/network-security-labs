@@ -1,0 +1,7 @@
+! Finance VLAN ACL
+! Purpose: Protect Engineering from Finance lateral movement
+
+ip access-list extended ACL_FIN
+ permit ip 10.10.20.0 0.0.0.255 host 10.10.50.30
+ deny ip 10.10.20.0 0.0.0.255 10.10.30.0 0.0.0.255
+ permit ip 10.10.20.0 0.0.0.255 any
