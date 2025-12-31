@@ -1,0 +1,8 @@
+! Sales VLAN ACL
+! Purpose: Limit Sales to DNS and HTTPS only
+
+ip access-list extended ACL_SALES
+ permit udp 10.10.40.0 0.0.0.255 host 10.10.50.10 eq domain
+ permit tcp 10.10.40.0 0.0.0.255 host 10.10.50.40 eq 443
+ deny ip 10.10.40.0 0.0.0.255 10.10.0.0 0.0.255.255
+ permit ip 10.10.40.0 0.0.0.255 any
