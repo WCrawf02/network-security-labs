@@ -1,0 +1,7 @@
+! HR VLAN ACL
+! Purpose: Allow HR access to HR services, restrict access to Finance
+
+ip access-list extended ACL_HR
+ permit ip 10.10.10.0 0.0.0.255 host 10.10.50.20
+ deny ip 10.10.10.0 0.0.0.255 10.10.20.0 0.0.0.255
+ permit ip 10.10.10.0 0.0.0.255 any
